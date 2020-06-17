@@ -14,17 +14,18 @@
         </header>
         <main>
             <div class="container">
-                <?php foreach ($dischi as $disco) {?>
+                <div class="cd-container">
+                    <?php foreach ($dischi as $disco) {?>
 
-                    <div class="cd" data-genere=<?php echo lcfirst($disco['genre']); ?>>
-                        <img src="<?php echo $disco['poster']; ?>" alt="immagine cd">
-                        <h3><?php echo $disco['title']; ?></h3>
-                        <span class="author"> <?php echo $disco['author']; ?>  </span>
-                        <span class="year"><?php echo $disco['year']; ?></span>
-                    </div>
+                        <div class="cd" data-genere=<?php echo lcfirst($disco['genre']); ?>>
+                            <img src="<?php echo $disco['poster']; ?>" alt="immagine cd">
+                            <h4><?php echo $disco['title']; ?></h4>
+                            <p class="author"> <?php echo $disco['author']; ?>  </p>
+                            <span class="year"><?php echo $disco['year']; ?></span>
+                        </div>
 
-                <?php }?>
-
+                    <?php }?>
+                </div>
             </div>
         </main>
 

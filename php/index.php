@@ -10,7 +10,14 @@
     </head>
     <body>
         <header>
+            <div class="container">
+                <div class="header-right">
+                    <img src="img/logo.png" alt="">
+                    <img class="logo-write"src="img/logo2.png" alt="">
 
+                </div>
+
+            </div>
         </header>
         <main>
             <div class="container">

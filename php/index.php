@@ -12,9 +12,24 @@
     <body>
         <header>
             <div class="container">
-                <div class="header-right">
-                    <img src="img/logo.png" alt="">
-                    <img class="logo-write"src="img/logo2.png" alt="">
+                <div class="header-wrapper">
+                    <div class="header-right">
+                        <img src="img/logo.png" alt="">
+                        <img class="logo-write"src="img/logo2.png" alt="">
+
+                    </div>
+                    <div class="header-left">
+                        <div class="select">
+                            <label for="select">Scegli un Autore</label>
+                             <select id="select" name="select">
+                                 <option selected value="all">Tutti</option>
+                                 <?php foreach ($dischi as $disco) {?>
+                                     <option value="<?php echo $disco['author'] ?>"><?php echo $disco['author']; ?></option>
+                                 <?php } ?>
+                             </select>
+                        </div>
+
+                    </div>
 
                 </div>
 

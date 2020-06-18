@@ -10,6 +10,12 @@ header {
   background-color: #1ED760;
 }
 
+header .header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header .header-right {
   height: 100%;
   width: 300px;
@@ -26,6 +32,12 @@ header .header-right img {
 
 header .header-right .logo-write {
   width: 100px;
+}
+
+header .header-left #select {
+  margin: 10px;
+  font-size: 13px;
+  padding: 2px;
 }
 
 main {

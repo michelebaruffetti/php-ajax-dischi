@@ -13,9 +13,21 @@
     <body>
         <header>
             <div class="container">
-                <div class="header-right">
-                    <img src="img/logo.png" alt="">
-                    <img class="logo-write"src="img/logo2.png" alt="">
+                <div class="header-wrapper">
+                    <div class="header-right">
+                        <img src="img/logo.png" alt="">
+                        <img class="logo-write"src="img/logo2.png" alt="">
+
+                    </div>
+                    <div class="header-left">
+                        <div class="select">
+                            <label for="select">Scegli un Autore</label>
+                             <select id="select" name="select">
+                                 <option selected value="all">Tutti</option>
+                             </select>
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -37,6 +49,9 @@
                 <p class="author">{{autore}}</p>
                 <span class="year">{{anno}}</span>
             </div>
+        </script>
+        <script id="template1" type="handlebars-template">
+            <option value="{{autore}}">{{autore}}</option>
         </script>
         <script src="dist/app.js" charset="utf-8"></script>
     </body>

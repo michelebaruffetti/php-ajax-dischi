@@ -12,21 +12,36 @@ header  {
     height: 70px;
     background-color: $header-bg-color;
 
-    .header-right   {
-        height: 100%;
-        width: 300px;
-        display: flex;
-        align-items: center;
-
-        img {
-            width: 50px;
-            object-fit: contain;
-            margin: 5px;
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .logo-write {
-            width: 100px;
+        .header-right   {
+            height: 100%;
+            width: 300px;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 50px;
+                object-fit: contain;
+                margin: 5px;
+            }
+
+            .logo-write {
+                width: 100px;
+            }
+
+
         }
+        .header-left    {
+            #select {
+                margin: 10px;
+                font-size: 13px;
+                padding: 2px;
+            }
     }
 
 

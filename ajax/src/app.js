@@ -1,8 +1,10 @@
 $(document).ready(function() {
 
     var template_html = $('#template').html();
+    var template_option = $('#template1').html();
 
     var hand_func_template = Handlebars.compile(template_html);
+    var hand_option_template = Handlebars.compile(template_option);
 
     $.ajax({
 
@@ -23,9 +25,15 @@ $(document).ready(function() {
                     'anno'   : disco.year
                 };
 
+                var dati_select = { 'autore': disco.author};
+
                 var html_handl_final = hand_func_template(dati_disco);
 
+                var html_handl_option = hand_option_template(dati_select);
+
                 $('.cd-container').append(html_handl_final);
+
+                $('#select').append(html_handl_option);
             }
 
         },

@@ -1,4 +1,4 @@
-<?php require 'dischi.php'; ?>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <title>Dischi PHP</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="dist/app.css">
     </head>
@@ -23,21 +24,20 @@
         <main>
             <div class="container">
                 <div class="cd-container">
-                    <?php foreach ($dischi as $disco) {?>
 
-                        <div class="cd" data-genere=<?php echo lcfirst($disco['genre']); ?>>
-                            <img src="<?php echo $disco['poster']; ?>" alt="immagine cd">
-                            <h4><?php echo $disco['title']; ?></h4>
-                            <p class="author"> <?php echo $disco['author']; ?>  </p>
-                            <span class="year"><?php echo $disco['year']; ?></span>
-                        </div>
-
-                    <?php }?>
                 </div>
             </div>
         </main>
 
+        <script id="template" type="handlebars-template">
 
+            <div class="cd" data-genere="{{genere}}">
+                <img src="{{poster}}" alt="immagine cd">
+                <h4>{{titolo}}</h4>
+                <p class="author">{{autore}}</p>
+                <span class="year">{{anno}}</span>
+            </div>
+        </script>
         <script src="dist/app.js" charset="utf-8"></script>
     </body>
 </html>

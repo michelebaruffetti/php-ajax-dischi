@@ -1,3 +1,6 @@
+$header-bg-color: #1ED760;
+$main-bg-color: #222326;
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +10,7 @@
 
 header  {
     height: 70px;
-    background-color: #1ED760;
+    background-color: $header-bg-color;
 
     .header-right   {
         height: 100%;
@@ -29,7 +32,7 @@ header  {
 
 }
 main    {
-    background-color: #222326;
+    background-color: $main-bg-color;
     height: 100vh;
     padding-top: 20px;
     overflow-y: auto;
